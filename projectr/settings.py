@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import dj_database_url
-from decouple import config
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -83,9 +83,7 @@ WSGI_APPLICATION = 'projectr.wsgi.application'
   #  }
 #}
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+   'default': dj_database_url.parse("postgresql://kurta_store_user:COZhWYBusJLXkd2Zsa8MMAkurCiLzABc@dpg-cr8nffi3esus73b9fprg-a.oregon-postgres.render.com/kurta_store")
 }
 
 
